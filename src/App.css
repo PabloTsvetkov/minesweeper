@@ -1,38 +1,125 @@
-.App {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 20px auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.difficulty-select p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button-group {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  background-color: #4caf50;
   color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.button-group button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.board {
+  display: inline-block;
+  margin: 20px auto;
+  border: 2px solid #333;
+}
+
+.board-row {
+  display: flex;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bbb;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.cell.revealed {
+  background-color: #e0e0e0;
+  cursor: default;
+}
+
+.cell.flagged {
+  color: red;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.controls button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #2196f3;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.controls button:hover {
+  background-color: #1976d2;
+}
+
+.controls button.active {
+  background-color: #0d47a1;
+}
+
+.bomb-counter {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.game-message {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #d32f2f;
+}
+
+.reset-button {
+  padding: 8px 16px;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  background-color: #f44336;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+  background-color: #d32f2f;
 }
