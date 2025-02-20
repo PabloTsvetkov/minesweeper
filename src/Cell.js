@@ -17,7 +17,7 @@ function Cell({ cell, onClick, boardSize }) {
   };
 
   if (window.innerWidth <= 748) {
-    cellSize = (window.innerWidth - 50) / boardSize;
+    cellSize = (window.innerWidth - 50) / boardSize - 2;
   }
   else {
     cellSize = 33;

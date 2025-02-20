@@ -180,12 +180,31 @@ body {
 
   .app-container {
     box-sizing: border-box;
-    height: 100vh;
-    min-height: 100vh;
-    border-bottom-width: 50px;
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     border-top-width: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     margin: 0;
+    min-height: 100vh;
+  }
+
+  .board {
+    margin-top: 20px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .button-group button {
+    width: 250px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1.3em;
   }
 }

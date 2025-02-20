@@ -110,7 +110,12 @@ function App() {
     // если режим "flag" – меняем состояние флага
     if (mode === 'flag') {
       if (!cell.isRevealed) {
-        cell.isFlagged = !cell.isFlagged;
+        if (remainingBombs() > 0 && cell.isFlagged === false) {
+          cell.isFlagged = true
+        }
+        else if (cell.isFlagged === true){
+          cell.isFlagged = !cell.isFlagged;
+        }
       }
     } else {
       // режим "dig"
