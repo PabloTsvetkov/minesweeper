@@ -173,5 +173,19 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  
+  body {
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  .app-container {
+    box-sizing: border-box;
+    height: 100vh;
+    min-height: 100vh;
+    border-bottom-width: 50px;
+    border-top-width: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin: 0;
+  }
 }
