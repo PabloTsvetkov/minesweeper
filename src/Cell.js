@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 
-function Cell({ cell, onClick }) {
+function Cell({ cell, onClick, boardSize }) {
+  let cellSize = 0;
   const renderContent = () => {
     if (!cell.isRevealed) {
       // Если ячейка не открыта, показываем заглушку (можно заменить на картинку)
@@ -15,10 +16,18 @@ function Cell({ cell, onClick }) {
     return cell.neighbor > 0 ? cell.neighbor : "";
   };
 
+  if (window.innerWidth <= 748) {
+    cellSize = (window.innerWidth - 50) / boardSize;
+  }
+  else {
+    cellSize = 33;
+  }
+
   return (
     <div
       className={`cell ${cell.isRevealed ? 'revealed' : ''} ${cell.isFlagged ? 'flagged' : ''}`}
       onClick={onClick}
+      style={{ width: `${cellSize}px`, height: `${cellSize}px` }}
     >
       {renderContent()}
     </div>

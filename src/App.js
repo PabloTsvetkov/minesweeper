@@ -62,6 +62,7 @@ function App() {
   const [gameOver, setGameOver] = useState(false);
   const [win, setWin] = useState(false);
   const [mode, setMode] = useState('dig'); // "dig" или "flag"
+  const [boardSize, setBoardSize] = useState(0);
 
   // пересоздаем игровое поле при выборе сложности или рестарте
   useEffect(() => {
@@ -71,6 +72,7 @@ function App() {
       setBoard(newBoard);
       setGameOver(false);
       setWin(false);
+      setBoardSize(rows);
     }
   }, [difficulty]);
 
@@ -175,7 +177,7 @@ function App() {
 
       {difficulty && (
         <>
-          <Board board={board} onCellClick={handleCellClick} />
+          <Board board={board} onCellClick={handleCellClick} boardSize={boardSize} />
           <div className="game-info">
             {gameOver && <p className="game-message">Вы проиграли!</p>}
             {win && <p className="game-message">Поздравляем, вы выиграли!</p>}

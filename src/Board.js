@@ -2,7 +2,7 @@ import React from 'react';
 import Cell from './Cell';
 import './App.css';
 
-function Board({ board, onCellClick }) {
+function Board({ board, onCellClick, boardSize }) {
   return (
     <div className="board">
       {board.map((row, rIndex) => (
@@ -12,6 +12,7 @@ function Board({ board, onCellClick }) {
               key={`${rIndex}-${cIndex}`}
               cell={cell}
               onClick={() => onCellClick(rIndex, cIndex)}
+              boardSize={boardSize}
             />
           ))}
         </div>
