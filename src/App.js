@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Board from './Board';
 import './App.css';
+import ShovelIcon from './images/shovel.png';
+import FlagIcon from './images/red-flag.png';
+import RetryIcon from './images/retry.png';
 
 const difficulties = {
   easy: { rows: 9, cols: 9, bombs: 10 },
@@ -10,8 +13,8 @@ const difficulties = {
 
 const directions = [
   [-1, -1], [-1, 0], [-1, 1],
-  [0, -1],           [0, 1],
-  [1, -1],  [1, 0],  [1, 1],
+  [0, -1], [0, 1],
+  [1, -1], [1, 0], [1, 1],
 ];
 
 function generateBoard(rows, cols, bombs) {
@@ -154,18 +157,20 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Сапёр</h1>
       {!difficulty && (
-        <div className="difficulty-select">
-          <p>Выберите уровень сложности:</p>
-          <div className="button-group">
-            {Object.keys(difficulties).map(level => (
-              <button key={level} onClick={() => setDifficulty(level)}>
-                {level.charAt(0).toUpperCase() + level.slice(1)}
-              </button>
-            ))}
+        <>
+          <h1>Сапёр</h1>
+          <div className="difficulty-select">
+            <p>Выберите уровень сложности:</p>
+            <div className="button-group">
+              {Object.keys(difficulties).map(level => (
+                <button key={level} onClick={() => setDifficulty(level)}>
+                  {level.charAt(0).toUpperCase() + level.slice(1)}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        </>
       )}
 
       {difficulty && (
@@ -177,14 +182,14 @@ function App() {
             <p className="bomb-counter">Осталось мин: {remainingBombs()}</p>
           </div>
           <div className="controls">
-            <button className={mode === 'dig' ? 'active' : ''} onClick={() => setMode('dig')}>
-              Лопата
+            <button className={mode === 'dig' ? 'active' : 'non-active'} onClick={() => setMode('dig')}>
+              <img src={ShovelIcon} />
             </button>
-            <button className={mode === 'flag' ? 'active' : ''} onClick={() => setMode('flag')}>
-              Флаги
+            <button className={mode === 'flag' ? 'active' : 'non-active'} onClick={() => setMode('flag')}>
+              <img src={FlagIcon} />
             </button>
           </div>
-          <button className="reset-button" onClick={resetGame}>Начать заново</button>
+          <button className="reset-button" onClick={resetGame}>НАЧАТЬ ЗАНОВО<img src={RetryIcon} /></button>
         </>
       )}
     </div>
