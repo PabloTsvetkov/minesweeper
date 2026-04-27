@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Minesweeper bomb icon">
+  <rect width="512" height="512" rx="112" fill="#111827"/>
+  <circle cx="248" cy="282" r="126" fill="#e5e7eb"/>
+  <circle cx="210" cy="240" r="34" fill="#ffffff" opacity="0.75"/>
+  <path d="M322 166c35-45 73-70 116-75" stroke="#facc15" stroke-width="34" stroke-linecap="round" fill="none"/>
+  <path d="M421 54l20 40 45 7-32 31 8 44-41-21-40 21 8-44-32-31 45-7z" fill="#fb7185"/>
+</svg>

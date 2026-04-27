@@ -1,36 +1,31 @@
 import React from 'react';
 import './App.css';
 
-function Cell({ cell, onClick, boardSize }) {
-  let cellSize = 0;
+function Cell({ cell, onClick, onFlag, row, col }) {
   const renderContent = () => {
     if (!cell.isRevealed) {
-      // Если ячейка не открыта, показываем заглушку (можно заменить на картинку)
-      return cell.isFlagged ? "🚩" : "";
+      return cell.isFlagged ? '🚩' : '';
     }
     if (cell.isBomb) {
-      // заглушка для бомбы
-      return "💣";
+      return '💣';
     }
-    // если нет соседних бомб, можно вернуть пустую строку
-    return cell.neighbor > 0 ? cell.neighbor : "";
+    return cell.neighbor > 0 ? cell.neighbor : '';
   };
 
-  if (window.innerWidth <= 748) {
-    cellSize = (window.innerWidth - 50) / boardSize - 2;
-  }
-  else {
-    cellSize = 33;
-  }
-
   return (
-    <div
-      className={`cell ${cell.isRevealed ? 'revealed' : ''} ${cell.isFlagged ? 'flagged' : ''}`}
+    <button
+      type="button"
+      className={`cell neighbor-${cell.neighbor} ${cell.isRevealed ? 'revealed' : ''} ${cell.isFlagged ? 'flagged' : ''}`}
       onClick={onClick}
-      style={{ width: `${cellSize}px`, height: `${cellSize}px` }}
+      onContextMenu={(event) => {
+        event.preventDefault();
+        onFlag();
+      }}
+      aria-label={`Строка ${row + 1}, колонка ${col + 1}${cell.isFlagged ? ', флаг' : ''}${cell.isRevealed ? ', открыта' : ', закрыта'}`}
+      disabled={cell.isRevealed && !cell.isBomb}
     >
       {renderContent()}
-    </div>
+    </button>
   );
 }
 

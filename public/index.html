@@ -1,66 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript">
-    (function (m, e, t, r, i, k, a) {
-      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-      m[i].l = 1 * new Date();
-      for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
-      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-    })
-      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-    ym(100038289, "init", {
-      clickmap: true,
-      trackLinks: true,
-      accurateTrackBounce: true
-    });
-  </script>
-  <noscript>
-    <div><img src="https://mc.yandex.ru/watch/100038289" style="position:absolute; left:-9999px;" alt="" /></div>
-  </noscript>
-  <!-- /Yandex.Metrika counter -->
   <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/bomb.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
-  <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/bomb.png" />
-  <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-  <title>Сапер онлайн</title>
-  <meta name="description"
-    content="Наслаждайтесь классическим Сапером – увлекательной игрой для проверки внимательности и логики. Открывайте клетки, избегайте мин и докажите, что вы настоящий стратег!" />
+  <title>Сапёр онлайн — играть бесплатно в Minesweeper</title>
+  <meta name="description" content="Классический сапёр в браузере: три уровня сложности, безопасный первый ход, таймер, daily-challenge и личные рекорды. Без регистрации и установки." />
+  <meta name="keywords" content="сапёр онлайн, сапер играть, minesweeper, сапёр бесплатно, сапер браузер, сапёр на день" />
+  <meta name="application-name" content="Сапёр" />
+  <meta name="apple-mobile-web-app-title" content="Сапёр" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <link rel="canonical" href="/" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/icon-maskable.svg" />
+  <link rel="mask-icon" href="%PUBLIC_URL%/favicon.svg" color="#facc15" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="Сапёр онлайн" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Сапёр онлайн — играть бесплатно" />
+  <meta property="og:description" content="Классический Minesweeper в браузере: безопасный первый ход, daily-challenge и личные рекорды." />
+  <meta property="og:url" content="/" />
+  <meta property="og:image" content="%PUBLIC_URL%/og-image.svg" />
+  <meta property="og:image:type" content="image/svg+xml" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Сапёр онлайн — открой поле, не подорвись" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Сапёр онлайн — играть бесплатно" />
+  <meta name="twitter:description" content="Классический Minesweeper в браузере: безопасный первый ход, daily-challenge и личные рекорды." />
+  <meta name="twitter:image" content="%PUBLIC_URL%/og-image.svg" />
+
+  <link rel="preconnect" href="https://mc.yandex.ru" crossorigin />
+  <link rel="preconnect" href="https://yandex.ru" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "url": "/",
+          "name": "Сапёр онлайн",
+          "inLanguage": "ru",
+          "description": "Классический сапёр в браузере: три уровня сложности, daily-challenge и личные рекорды."
+        },
+        {
+          "@type": "VideoGame",
+          "name": "Сапёр онлайн",
+          "applicationCategory": "Game",
+          "operatingSystem": "Web",
+          "genre": "Logic puzzle",
+          "url": "/",
+          "inLanguage": "ru",
+          "isAccessibleForFree": true,
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "RUB" },
+          "gamePlatform": "Web browser",
+          "playMode": "SinglePlayer"
+        }
+      ]
+    }
+  </script>
+
+  <!-- Yandex.Metrika -->
+  <script>
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
+      k=e.createElement(t);a=e.getElementsByTagName(t)[0];k.async=1;k.src=r;a.parentNode.insertBefore(k,a)
+    })(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+    ym(100038289,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/100038289" style="position:absolute;left:-9999px;" alt="" /></div></noscript>
+
+  <!-- Yandex.RTB -->
+  <script>window.yaContextCb=window.yaContextCb||[]</script>
+  <script src="https://yandex.ru/ads/system/context.js" async></script>
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <noscript>Чтобы играть в сапёра онлайн, включите JavaScript в браузере.</noscript>
   <div id="root"></div>
-  <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
 </body>
 
 </html>

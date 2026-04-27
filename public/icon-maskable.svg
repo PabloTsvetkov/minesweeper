@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="!0?Q@ 8:>=:0">
+  <defs>
+    <radialGradient id="mbg" cx="50%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#1f2a44"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </radialGradient>
+    <radialGradient id="mball" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="55%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </radialGradient>
+    <linearGradient id="mspark" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#facc15"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#mbg)"/>
+
+  <g transform="translate(0 16)">
+    <circle cx="256" cy="288" r="148" fill="url(#mball)"/>
+    <circle cx="200" cy="232" r="36" fill="#ffffff" opacity="0.68"/>
+
+    <g fill="#0b1120">
+      <circle cx="256" cy="160" r="18"/>
+      <circle cx="172" cy="216" r="18"/>
+      <circle cx="340" cy="216" r="18"/>
+      <circle cx="172" cy="360" r="18"/>
+      <circle cx="340" cy="360" r="18"/>
+      <circle cx="256" cy="416" r="18"/>
+    </g>
+
+    <path d="M360 168 C414 122, 422 86, 422 56" stroke="#0b1120" stroke-width="22" stroke-linecap="round" fill="none"/>
+    <path d="M360 168 C414 122, 422 86, 422 56" stroke="#facc15" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <circle cx="422" cy="56" r="28" fill="url(#mspark)"/>
+    <circle cx="422" cy="56" r="12" fill="#fff7ed"/>
+  </g>
+</svg>

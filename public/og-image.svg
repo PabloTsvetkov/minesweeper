@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="!0?Q@ >=;09=">
+  <defs>
+    <linearGradient id="ogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+    <radialGradient id="ogBall" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="55%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </radialGradient>
+    <linearGradient id="ogSpark" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#facc15"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+
+  <g opacity="0.18" stroke="#94a3b8" stroke-width="1">
+    <line x1="0" y1="105" x2="1200" y2="105"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <line x1="150" y1="0" x2="150" y2="630"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="450" y1="0" x2="450" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="750" y1="0" x2="750" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="1050" y1="0" x2="1050" y2="630"/>
+  </g>
+
+  <g transform="translate(72 132)" font-family="'Space Grotesk','Inter',system-ui,sans-serif" fill="#f8fafc">
+    <text x="0" y="0" font-size="48" font-weight="600" fill="#facc15">! </text>
+    <text x="0" y="120" font-size="120" font-weight="700">B:@>9 ?>;5,</text>
+    <text x="0" y="240" font-size="120" font-weight="700">=5 ?>4>@28AL.</text>
+    <text x="0" y="320" font-size="32" font-weight="500" fill="#cbd5e1">
+      57>?0A=K9 ?5@2K9 E>4. Daily-G5;;5=46. 8G=K5 @5:>@4K.
+    </text>
+  </g>
+
+  <g transform="translate(820 130)">
+    <circle cx="160" cy="200" r="160" fill="url(#ogBall)"/>
+    <circle cx="100" cy="140" r="38" fill="#ffffff" opacity="0.65"/>
+    <g fill="#0b1120">
+      <circle cx="160" cy="60" r="16"/>
+      <circle cx="60" cy="120" r="16"/>
+      <circle cx="260" cy="120" r="16"/>
+      <circle cx="60" cy="280" r="16"/>
+      <circle cx="260" cy="280" r="16"/>
+      <circle cx="160" cy="340" r="16"/>
+    </g>
+    <path d="M280 80 C340 30, 348 -10, 348 -50" stroke="#0b1120" stroke-width="22" stroke-linecap="round" fill="none"/>
+    <path d="M280 80 C340 30, 348 -10, 348 -50" stroke="#facc15" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <circle cx="348" cy="-50" r="28" fill="url(#ogSpark)"/>
+    <circle cx="348" cy="-50" r="12" fill="#fff7ed"/>
+  </g>
+</svg>
